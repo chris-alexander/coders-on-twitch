@@ -1,0 +1,41 @@
+<body ng-app="twitchApp">
+  <div class="container">
+    <div class="main" ng-controller="MainController">
+      <h2>Coders on <i class="fa fa-twitch"></i> Twitch</h2>
+      <div id="tabs" class='row'>
+        <ul class="nav nav-tabs">
+          <li id="all-tab" class="btn btn-tab col-xs-4" ng-class="{active: (tab === 'all')}" ng-click="setTab('all')">All</li>
+          <li id="online-tab" class="btn btn-tab col-xs-4" ng-class="{active: (tab === 'online')}" ng-click="setTab('online')"><i class="fa fa-circle green"></i> Online</li>
+          <li id="offline-tab" class="btn btn-tab col-xs-4" ng-class="{active: (tab === 'offline')}" ng-click="setTab('offline')"><i class='fa fa-circle red'></i> Offline</li>
+        </ul>
+      </div>
+      <form id="search" class="form-inline row">
+        <div class='form-group col-xs-10 col-xs-offset-1'>
+          <div class='input-group'>
+            <span class='input-group-addon'><i class='fa fa-search'></i></span>
+            <input type="text" class="form-control" ng-model="searchText"></input>
+          </div>
+        </div>
+      </form>
+      <div id="streamer-list">
+        <a ng-repeat="streamer in streamers | filter:searchText" href="{{ streamer.url }}" target="_blank" class=''>
+          <div class="streamer">
+            <div>
+              <img class="display-pic img-circle" ng-src="{{ streamer.logo }}">
+            </div>
+            <div class="info-block">
+              <span class="display-name">{{ streamer.display_name }}</span><br/>
+              <small class="desc" ng-show="streamer.stream">{{ streamer.stream.channel.status }}</small>
+            </div>
+            <div class="status">
+              <i ng-class="{ green: streamer.stream }" class="fa fa-circle red"></i>
+            </div>
+          </div>
+          <!-- end streamer -->
+        </a>
+      </div>
+      <!--  end streamer list -->
+    </div>
+  </div>
+  <!-- end container -->
+</body>
