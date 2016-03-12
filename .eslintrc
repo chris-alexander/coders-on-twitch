@@ -1,0 +1,9 @@
+{
+  "extends": "eslint-config-airbnb/legacy",
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "angular": true
+  }
+}

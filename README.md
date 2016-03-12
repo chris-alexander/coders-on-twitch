@@ -1,1 +1,2 @@
-# twitch-api-app
+# Coders on Twitch
+

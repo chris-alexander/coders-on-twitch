@@ -1,0 +1,31 @@
+{
+  "name": "coders-on-twitch",
+  "version": "1.0.0",
+  "description": "my solution to the free code camp twitch api fontend challenge",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris-alexander/coders-on-twitch.git"
+  },
+  "keywords": [
+    "twitch",
+    "freecodecamp",
+    "learntocode",
+    "javascript"
+  ],
+  "author": "Chris Alexander",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris-alexander/coders-on-twitch/issues"
+  },
+  "homepage": "https://github.com/chris-alexander/coders-on-twitch#readme",
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "gulp": "^3.9.1"
+  }
+}
